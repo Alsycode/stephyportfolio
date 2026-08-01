@@ -2,39 +2,41 @@ const PROJECTS = {
   1: {
     title: "KODAMANJU",
     type: "Short Film",
-    year: "2025",
+    year: "2022",
     role: "Director",
     image: "images/work1.png",
     watchUrl: "https://youtu.be/ade9Cd5ws20?si=Yf-enP8_Jfg3O1K4",
     logline: "A child steps into a landscape of quiet kindness, finding belonging in the simple offer of a helping hand and a shared meal.",
     description: "Kodamanju is a quiet reflection on nurturing, the power of human connection, and the small, domestic acts that transform a house into a home.",
     credits: {
-      "Direction": "Stephy",
-      "Story": "Stephy",
-      "Producer": "Nadia Correia",
-      "Cinematography": "Rohan Verma",
-      "Editing": "Stephy",
-      "Sound Design": "Leah Fontaine",
-      "Music": "Kavi Rajan"
+      "Direction": "Stephy Manjooran",
+      "Written": "Stephy Manjooran",
+      "Producer": "Women and Child Development Department, District Child Protection Unit, Ernakulam",
+      "Cinematography": "Rishi Raju",
+      "Editing": "Anes Manilal",
+      "Sound Design": "Anoop Siva",
+      "Music": "Sandeep Sajeeva",
+      "Dubbing": "K7 Studio"
     }
   },
   2: {
     title: "JOKUTTAN AND THE DRAGON",
     type: "Short Film",
-    year: "2024",
+    year: "2026",
     role: "Director",
     image: "images/work2.png",
     watchUrl: "https://youtu.be/z6BqnKfXelI?si=LYLzhN7KVCme9Gpw",
     logline: "A boy confronts the shadow of loss when a cherished companion is taken, sparking a quest for justice that leads him to face his own internal \"dragons\".",
     description: "Jokuttan and the Dragon sits with the innocence of childhood faith, the weight of anger, and the grace found in the courage to forgive.",
     credits: {
-      "Direction": "Stephy",
-      "Story": "Stephy",
-      "Producer": "Nadia Correia",
-      "Cinematography": "Ines Alvarado",
-      "Editing": "Marco Diehl",
-      "Sound Design": "Leah Fontaine",
-      "Music": "Ólafur Halldórsson"
+      "Direction": "Stephy Manjooran",
+      "Producer": "CMC Vision, Mount Carmel Generalate, Aluva",
+      "Written": "Stephy Manjooran",
+      "Cinematography": "Rishi Raju",
+      "Editing": "FCD",
+      "Music": "Sandeep Sajeeva",
+      "Sound Design": "Anoop Siva",
+      "Dubbing Studio": "Sapthaa Records"
     }
   },
   3: {

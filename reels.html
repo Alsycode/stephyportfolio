@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reels — Stephy</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav dark-bg">
+  <a href="index.html" class="brand">STEPHY</a>
+  <div class="nav-links">
+    <a href="index.html" data-page="index.html">HOME</a>
+    <span class="sep">/</span>
+    <a href="work.html" data-page="work.html">WORK</a>
+    <span class="sep">/</span>
+    <a href="reels.html" data-page="reels.html">REELS</a>
+    <span class="sep">/</span>
+    <a href="about.html" data-page="about.html">ABOUT</a>
+    <span class="sep">/</span>
+    <a href="contact.html" data-page="contact.html">CONTACT</a>
+  </div>
+</nav>
+
+<main class="reels-page">
+  <div class="reels-header">
+    <h1 class="reels-title">Reels.</h1>
+    <p class="reels-subtitle">SHORT-FORM STORIES, ONE FRAME AT A TIME.</p>
+  </div>
+
+  <div class="reels-row" id="reelsRow"></div>
+
+  <div class="reels-dots" id="reelsDots"></div>
+</main>
+
+<script src="js/reels.js"></script>
+<script>
+  const row = document.getElementById('reelsRow');
+  const dots = document.getElementById('reelsDots');
+
+  REELS.forEach((reel) => {
+    const card = document.createElement('a');
+    card.className = 'reel-card';
+    card.href = reel.watchUrl;
+    card.target = '_blank';
+    card.rel = 'noopener';
+    card.innerHTML = `
+      <img src="${reel.image}" alt="${reel.caption}">
+      <div class="reel-card-overlay"></div>
+      <div class="reel-play-btn">
+        <svg width="18" height="18" viewBox="0 0 20 20"><polygon points="4,2 18,10 4,18" /></svg>
+      </div>
+      <div class="reel-caption">${reel.caption}</div>
+      <div class="reel-duration">${reel.duration}</div>
+    `;
+    row.appendChild(card);
+  });
+
+  REELS.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dots.appendChild(dot);
+  });
+
+  row.addEventListener('scroll', () => {
+    const cardWidth = row.firstElementChild.getBoundingClientRect().width + 26;
+    const index = Math.round(row.scrollLeft / cardWidth);
+    [...dots.children].forEach((d, i) => d.classList.toggle('active', i === index));
+  });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
