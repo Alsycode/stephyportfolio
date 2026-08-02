@@ -8,6 +8,13 @@ export const PROJECTS = {
     watchUrl: "https://youtu.be/ade9Cd5ws20?si=Yf-enP8_Jfg3O1K4",
     logline: "A child steps into a landscape of quiet kindness, finding belonging in the simple offer of a helping hand and a shared meal.",
     description: "Kodamanju is a quiet reflection on nurturing, the power of human connection, and the small, domestic acts that transform a house into a home.",
+    gallery: [
+      { image: "/images/kodamanju/still-1.jpg", caption: "Lighting the way" },
+      { image: "/images/kodamanju/still-2.jpg", caption: "Walking to the water" },
+      { image: "/images/kodamanju/still-3.jpg", caption: "Mother and son" },
+      { image: "/images/kodamanju/still-4.jpg", caption: "A quiet grief" },
+      { image: "/images/kodamanju/still-5.jpg", caption: "Between worlds" }
+    ],
     credits: {
       "Direction": "Stephy Manjooran",
       "Written": "Stephy Manjooran",

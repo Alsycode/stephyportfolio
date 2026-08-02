@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
-import { PROJECTS, PROJECT_IDS, getProject, getNextProjectId } from "@/data/projects";
+import { PROJECT_IDS, getProject, getNextProjectId } from "@/data/projects";
 
 export function generateStaticParams() {
   return PROJECT_IDS.map((id) => ({ id }));
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   return { title: `${project.title} — Stephy` };
 }
 
-const GALLERY_CAPTIONS = ["Behind the scenes", "On location", "Final setup", "Director's eye"];
+const FALLBACK_CAPTIONS = ["Behind the scenes", "On location", "Final setup", "Director's eye"];
 
 export default async function WorkDetail({ params }) {
   const { id } = await params;
@@ -23,6 +23,10 @@ export default async function WorkDetail({ params }) {
   if (!project) notFound();
 
   const nextId = getNextProjectId(id);
+
+  const gallery =
+    project.gallery ||
+    FALLBACK_CAPTIONS.map((caption) => ({ image: project.image, caption }));
 
   return (
     <>
@@ -59,16 +63,16 @@ export default async function WorkDetail({ params }) {
       </div>
 
       <div className="detail-gallery">
-        {GALLERY_CAPTIONS.map((caption) => (
-          <figure key={caption}>
+        {gallery.map((item, i) => (
+          <figure key={i}>
             <Image
-              src={project.image}
-              alt={`${project.title} still`}
+              src={item.image}
+              alt={`${project.title} — ${item.caption}`}
               fill
-              sizes="200px"
+              sizes="340px"
               style={{ objectFit: "cover" }}
             />
-            <div className="gallery-caption">{caption}</div>
+            <div className="gallery-caption">{item.caption}</div>
           </figure>
         ))}
       </div>

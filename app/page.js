@@ -19,7 +19,7 @@ export default function Home() {
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <h1 className="hero-name">STEPHY</h1>
+          <h1 className="hero-name">STEPHY MANJOORAN</h1>
           <p className="hero-role">FILMMAKER &nbsp;/&nbsp; DIRECTOR &nbsp;/&nbsp; STORYTELLER</p>
         </div>
 

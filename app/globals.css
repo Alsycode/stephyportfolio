@@ -552,8 +552,8 @@ img{display:block;max-width:100%;}
 
 .detail-gallery figure{
   position:relative;
-  height:260px;
-  width:200px;
+  height:220px;
+  width:340px;
   flex-shrink:0;
 }
 
