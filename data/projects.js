@@ -35,6 +35,12 @@ export const PROJECTS = {
     watchUrl: "https://youtu.be/z6BqnKfXelI?si=LYLzhN7KVCme9Gpw",
     logline: "A boy confronts the shadow of loss when a cherished companion is taken, sparking a quest for justice that leads him to face his own internal \"dragons\".",
     description: "Jokuttan and the Dragon sits with the innocence of childhood faith, the weight of anger, and the grace found in the courage to forgive.",
+    gallery: [
+      { image: "/images/jokuttan/still-1.png", caption: "Facing the woods" },
+      { image: "/images/jokuttan/still-2.png", caption: "A quiet companion" },
+      { image: "/images/jokuttan/still-3.png", caption: "Standing together" },
+      { image: "/images/jokuttan/still-4.png", caption: "The dragon and the boy" }
+    ],
     credits: {
       "Direction": "Stephy Manjooran",
       "Producer": "CMC Vision, Mount Carmel Generalate, Aluva",
@@ -46,6 +52,7 @@ export const PROJECTS = {
       "Dubbing Studio": "Sapthaa Records"
     }
   },
+  /* Temporarily hidden — re-enable by uncommenting.
   3: {
     title: "KIDS BUDDY QUIZ",
     type: "Ad",
@@ -83,6 +90,7 @@ export const PROJECTS = {
       "Music": "Ólafur Halldórsson"
     }
   }
+  */
 };
 
 export const PROJECT_IDS = Object.keys(PROJECTS);
