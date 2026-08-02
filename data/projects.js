@@ -41,8 +41,7 @@ export const PROJECTS = {
   },
   3: {
     title: "KIDS BUDDY QUIZ",
-    type: "Documentary Short",
-    listType: "Documentary",
+    type: "Ad",
     year: "2023",
     role: "Director / DOP",
     image: "/images/work3.png",
@@ -60,7 +59,7 @@ export const PROJECTS = {
   },
   4: {
     title: "KIDS BUDDY PUZZLE",
-    type: "Short Film",
+    type: "Ad",
     year: "2022",
     role: "Director",
     image: "/images/work4.png",
